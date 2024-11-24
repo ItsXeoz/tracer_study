@@ -1,6 +1,4 @@
 import "./bootstrap";
-console.log("working");
-AOS.init();
 
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".counter");
@@ -140,3 +138,5 @@ document.addEventListener("click", (e) => {
         sidebar.classList.add("-translate-x-full");
     }
 });
+
+

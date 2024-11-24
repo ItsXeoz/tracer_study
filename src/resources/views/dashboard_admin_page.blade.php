@@ -28,7 +28,7 @@
             </div>
         </div>
         <nav class="mt-6 flex-1">
-            <a href="{{ route('login') }}" class="block py-2.5 px-4 rounded transition hover:bg-yellow-100 hover:text-yellow-500">
+            <a href="{{ route('admin') }}" class="block py-2.5 px-4 rounded transition hover:bg-yellow-100 hover:text-yellow-500">
                 <i class="fas fa-tachometer-alt mr-3"></i> Dashboard
             </a>
             <a href="#" class="block py-2.5 px-4 rounded transition hover:bg-yellow-100 hover:text-yellow-500">
@@ -41,12 +41,13 @@
     <div class="w-full flex flex-col ml-0 sm:ml-64">
         <!-- Desktop Header -->
         <header class="w-full bg-yellow-50 shadow-md py-4 px-6 flex justify-between">
+            <!-- Tombol Toggle Sidebar -->
             <button id="toggleSidebar" class="text-black text-3xl focus:outline-none sm:hidden">
                 <i class="fas fa-bars"></i>
             </button>
 
             <div class="flex items-center">
-                <h1 class="text-lg font-bold text-black">Dashboard</h1>
+                <h1 class="text-lg font-bold text-black">Admin</h1>
             </div>
             <div class="relative">
                 <button id="avatarButton"
@@ -66,6 +67,9 @@
                 </div>
             </div>
         </header>
+
+
+
 
         <!-- Main Section -->
         <main class="w-full flex-grow p-6 overflow-y-auto">

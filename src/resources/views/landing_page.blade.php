@@ -5,6 +5,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
@@ -30,9 +31,12 @@
     @include('components.navbar')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <script>
+        AOS.init();
+    </script>
     <!-- Main Content -->
     <main class="container mx-auto py-10 px-5">
-        <div class="flex flex-wrap md:flex-nowrap justify-between md:mx-10 items-center mb-10">
+        <div class="flex flex-wrap md:flex-nowrap justify-between md:mx-10 items-center mb-10" data-aos="fade-up">
             <div class="max-w-lg mb-6 md:mb-0">
                 <h2 class="text-2xl font-bold mb-4">Tracer Study Teknik Informatika</h2>
                 <p class="mb-6 text-gray-700">
@@ -52,20 +56,20 @@
     </main>
 
     <!-- Statistics Section -->
-    <section class="bg-yellow-400 py-10 px-6 shadow-md " data-aos="fade-up" >
+    <section class="bg-yellow-400 py-10 px-6 shadow-md " data-aos="fade-up">
         <h3 class="text-center text-2xl font-bold mb-6">Lulusan Teknik Informatika</h3>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div  data-aos="fade-down"
+            <div data-aos="fade-down"
                 class="bg-white p-6 rounded-lg shadow-md border-b-4 border-transparent  hover:border-yellow-500 transition-all duration-300 transform float-in">
                 <p class="text-3xl font-bold text-black-500 counter" data-target="3712">0</p>
                 <p>Total</p>
             </div>
-            <div  data-aos="fade-down"
+            <div data-aos="fade-down"
                 class="bg-white p-6 rounded-lg shadow-md border-b-4 border-transparent hover:border-yellow-500 transition-all duration-300 transform float-in">
                 <p class="text-3xl font-bold text-black-500 counter" data-target="1872">0</p>
                 <p>Pekerjaan Sesuai Dengan Jurusan</p>
             </div>
-            <div  data-aos="fade-down"
+            <div data-aos="fade-down"
                 class="bg-white p-6 rounded-lg shadow-md border-b-4 border-transparent hover:border-yellow-500 transition-all duration-300 transform float-in">
                 <p class="text-3xl font-bold text-black-500 counter" data-target="1341">0</p>
                 <p>Pekerjaan Tidak Sesuai Dengan Jurusan</p>

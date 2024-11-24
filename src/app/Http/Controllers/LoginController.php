@@ -21,13 +21,14 @@ class LoginController extends Controller
             'password' => 'required|string',
         ]);
 
-        // Cek apakah autentikasi berhasil
         if (Auth::attempt(['nim' => $request->nim, 'password' => $request->password])) {
-            // Jika berhasil, redirect ke halaman dashboard atau halaman yang diinginkan
-            return redirect()->intended('/profile');
+
+            if(Auth::user()-> role == 'admin'){
+                return redirect()->intended('/admin');
+            }
+            return redirect()->intended('/user');
         }
 
-        // Jika gagal, kembali ke form login dengan pesan error
         return back()->withErrors(['nim' => 'NIM atau password salah.']);
     }
 
