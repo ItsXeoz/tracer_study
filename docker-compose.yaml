@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   # Web Server Service
   nginx:
@@ -8,7 +10,7 @@ services:
     volumes:
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     depends_on:
-      - app  
+      - app
       - db
 
   # Database Service
@@ -26,7 +28,7 @@ services:
   # Application Service
   app:
     container_name: study_tracker
-    build: 
+    build:
       context: ./src
       dockerfile: Dockerfile
     volumes:
@@ -34,6 +36,8 @@ services:
     ports:
       - "9000:9000"
     working_dir: /var/www
+    depends_on:
+      - db
 
   # phpMyAdmin Service
   phpmyadmin:
