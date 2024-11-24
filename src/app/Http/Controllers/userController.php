@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class userController extends Controller
 {
-    public function showLoginForm()
+    public function showProfile()
     {
-        return view('login_page'); 
+        return view('profile');
     }
 }
